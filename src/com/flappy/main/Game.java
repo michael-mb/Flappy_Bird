@@ -111,6 +111,7 @@ public class Game extends JPanel{
 			frame = 0 ;
 		}		
 	}
+	
 	private boolean isDeath() {		
 		if(flappy.getPosY() >= windowsHeight - (flappy.getWidth() - 15 )) {
 			flappy.setPosY(windowsHeight - (flappy.getWidth() - 15 ));

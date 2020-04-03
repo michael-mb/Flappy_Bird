@@ -17,61 +17,49 @@ public class Flappy {
 	    height = 30 ;
 	}
 
-
 	public double getWidth() {
 		return width;
 	}
-
 
 	public void setWidth(double width) {
 		this.width = width;
 	}
 
-
 	public double getHeight() {
 		return height;
 	}
-
 
 	public void setHeight(double height) {
 		this.height = height;
 	}
 
-
 	public double getPosX() {
 		return posX;
 	}
-
 
 	public void setPosX(double posX) {
 		this.posX = posX;
 	}
 
-
 	public double getPosY() {
 		return posY;
 	}
-
 
 	public void setPosY(double posY) {
 		this.posY = posY;
 	}
 
-
 	public double getVelocity() {
 		return velocity;
 	}
-
 
 	public void setVelocity(double velocity) {
 		this.velocity = velocity;
 	}
 
-
 	public double getGravity() {
 		return gravity;
 	}
-
 
 	public void setPosY(int posY) {
 		this.posY = posY;

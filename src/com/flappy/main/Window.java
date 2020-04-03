@@ -20,10 +20,10 @@ public class Window extends JFrame{
 		this.setVisible(true);
 	}
 	
-	
 	private void initParts() {
 		game = new Game();
 	}
+	
 	private void initWindow() {
 	
 		this.setTitle("Flappy Bird");
@@ -32,8 +32,7 @@ public class Window extends JFrame{
 		this.setResizable(false);
 		this.setAlwaysOnTop(false);
 		this.setLocationRelativeTo(null);
-		this.add(game , BorderLayout.CENTER);
-		
+		this.add(game , BorderLayout.CENTER);	
 	}
 	
 	private void initListener() {
@@ -61,6 +60,5 @@ public class Window extends JFrame{
 		    } catch (InterruptedException e) {
 		      e.printStackTrace();
 		    }
-	 } 
-	  
+	 } 	  
 }
