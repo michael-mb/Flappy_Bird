@@ -39,8 +39,7 @@ public class Game extends JPanel{
 	private Image pipeDownImage;
 	private String pipeDownImagePath = "/images/pipe-down.png";
 	
-	private Image flappyImage ;
-	private String flappyImagePath = "/images/flappy.png";
+
 	
 	public Game() {
 		flappy = new Flappy();
@@ -56,7 +55,6 @@ public class Game extends JPanel{
 			backgroundImage = ImageIO.read(getClass().getResource(backgroundImagePath));
 			pipeUpImage = ImageIO.read(getClass().getResource(pipeUpImagePath));
 			pipeDownImage = ImageIO.read(getClass().getResource(pipeDownImagePath));
-			flappyImage = ImageIO.read(getClass().getResource(flappyImagePath));
 			
 		    } catch (IOException e) {
 		      e.printStackTrace();
@@ -76,7 +74,7 @@ public class Game extends JPanel{
 			 }
 		 }
 		 
-		 g2.drawImage(flappyImage, (int)flappy.getPosX(), (int)flappy.getPosY(),(int)flappy.getWidth(),(int) flappy.getHeight(), null);
+		 g2.drawImage(flappy.fly(50), (int)flappy.getPosX(), (int)flappy.getPosY(),(int)flappy.getWidth(),(int) flappy.getHeight(), null);
 		 if(!isDeath()) {
 			 flappy.update();
 		 }
@@ -120,7 +118,7 @@ public class Game extends JPanel{
 		}
 		
 		for(Obstacle obs : obstacles) {
-			if(flappy.getPosX() >= obs.getPosX() 
+			if(flappy.getPosX() + flappy.getWidth() >= obs.getPosX() 
 					&& flappy.getPosX() <= obs.getPosX() + obs.getWidth()){
 				if(flappy.getPosY() < obs.getTop()) {
 					return true;

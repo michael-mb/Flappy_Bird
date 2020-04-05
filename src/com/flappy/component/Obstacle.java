@@ -12,8 +12,8 @@ public class Obstacle {
 	private double posX ; 
 	
 	public Obstacle(){
-		top = (Math.random() * ((windowsHeight/2 - 20) + 1)) + 20;
-		bottom = (Math.random() * ((windowsHeight/2 - 20) + 1)) + 20;
+		top = (Math.random() * ((windowsHeight/2 - 55  - 20) + 1)) + 20;
+		bottom = (Math.random() * ((windowsHeight/2 - 55 - 20) + 1)) + 20;
 		posX = windowsWidth ;
 	}
 	
